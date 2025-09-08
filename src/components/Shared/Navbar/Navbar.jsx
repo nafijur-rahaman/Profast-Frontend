@@ -1,5 +1,6 @@
 import React from "react";
 import Logo from "../Logo/Logo";
+import { NavLink } from "react-router";
 
 const Navbar = () => {
   return (
@@ -44,12 +45,12 @@ const Navbar = () => {
 
               {/* Buttons */}
               <div className="hidden sm:flex sm:items-center space-x-4">
-                <a
+                <NavLink to={'/register'}
                   href="#"
                   className="text-sm font-semibold border-2 border-[#EAECED] text-[#797d7f]  px-4 py-2 rounded-xl  hover:bg-[#caeb66] hover:text-black transition"
                 >
                   Sign up
-                </a>
+                </NavLink>
                 <a
                   href="#"
                   className="text-sm font-semibold bg-[#caeb66] text-black px-4 py-2 rounded-xl shadow-md hover:bg-[#a0cf12] transition"
