@@ -23,12 +23,12 @@ const Navbar = () => {
                 >
                   Service
                 </a>
-                <a
-                  href="#"
+                <NavLink
+                 to={'/coverage'}
                   className="text-black text-sm font-semibold hover:text-[#caeb66] transition"
                 >
                   Coverage
-                </a>
+                </NavLink>
                 <a
                   href="#"
                   className="text-black text-sm font-semibold hover:text-[#caeb66] transition"
@@ -87,12 +87,12 @@ const Navbar = () => {
                 >
                   Service
                 </a>
-                <a
-                  href="#"
+                <NavLink
+                  to={'/coverage'}
                   className="text-gray-800 text-sm font-semibold hover:text-purple-600"
                 >
                   Coverage
-                </a>
+                </NavLink>
                 <a
                   href="#"
                   className="text-gray-800 text-sm font-semibold hover:text-purple-600"

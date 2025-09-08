@@ -3,6 +3,7 @@ import RootLayout from "../MainLayout/RootLayout";
 import Home from "../Pages/Home/Home";
 import Register from "../Pages/Register/Register";
 import Login from "../Pages/Login/Login";
+import Coverage from "../components/Coverage/Coverage";
 
 
 export const router = createBrowserRouter([
@@ -19,6 +20,9 @@ export const router = createBrowserRouter([
         },{
           path: "/login",
           element: <Login></Login>
+        },{
+          path: "/coverage",
+          element:<Coverage></Coverage>
         }
     ]
   },
