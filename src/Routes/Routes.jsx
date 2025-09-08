@@ -4,6 +4,7 @@ import Home from "../Pages/Home/Home";
 import Register from "../Pages/Register/Register";
 import Login from "../Pages/Login/Login";
 import Coverage from "../components/Coverage/Coverage";
+import AddParcel from "../Pages/AddPercel/AddParcel";
 
 
 export const router = createBrowserRouter([
@@ -23,6 +24,9 @@ export const router = createBrowserRouter([
         },{
           path: "/coverage",
           element:<Coverage></Coverage>
+        },{
+          path: "/add-parcel",
+          element: <AddParcel></AddParcel>
         }
     ]
   },
