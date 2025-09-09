@@ -26,7 +26,9 @@ export const router = createBrowserRouter([
           element:<Coverage></Coverage>
         },{
           path: "/add-parcel",
-          element: <AddParcel></AddParcel>
+          element: <AddParcel></AddParcel>,
+          loader: ()=> fetch("/warehouses.json"),
+          hydrateFallbackElement: <div>Loading...</div>
         }
     ]
   },
