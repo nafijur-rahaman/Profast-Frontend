@@ -5,6 +5,9 @@ import Register from "../Pages/Register/Register";
 import Login from "../Pages/Login/Login";
 import Coverage from "../components/Coverage/Coverage";
 import AddParcel from "../Pages/AddPercel/AddParcel";
+import Dashboard from "../Pages/Dashboard/Dashboard";
+import MyParcels from "../Pages/MyParcels/MyParcels";
+import Payment from "../Pages/Payment/Payment";
 
 
 export const router = createBrowserRouter([
@@ -12,7 +15,8 @@ export const router = createBrowserRouter([
     path: "/",
     element: <RootLayout></RootLayout>,
     children: [
-        {
+
+        {   index: true,
             path: "/",
             element: <Home></Home>
         },{
@@ -24,12 +28,26 @@ export const router = createBrowserRouter([
         },{
           path: "/coverage",
           element:<Coverage></Coverage>
-        },{
-          path: "/add-parcel",
-          element: <AddParcel></AddParcel>,
-          loader: ()=> fetch("/warehouses.json"),
-          hydrateFallbackElement: <div>Loading...</div>
         }
     ]
   },
+  {
+    path:'/dashboard',
+    element:<Dashboard></Dashboard>,
+    children:[
+        {
+          path: "add-parcel",
+          element: <AddParcel></AddParcel>,
+          loader: ()=> fetch("/warehouses.json"),
+          hydrateFallbackElement: <div>Loading...</div>
+        },
+        {
+          path: "my-parcels",
+          element: <MyParcels></MyParcels>,
+        },{
+          path: "payment/:id",
+          element: <Payment></Payment>
+        }
+    ]
+  }
 ]);
